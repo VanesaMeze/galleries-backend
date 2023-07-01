@@ -17,10 +17,4 @@ class Gallery extends Model
         return $this->hasMany(Comment::class);
     }
 
-    protected $fillable = [
-        'name',
-        'description',
-        'urls',
-        'author_id'
-    ];
 }

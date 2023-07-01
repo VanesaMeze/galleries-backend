@@ -13,6 +13,7 @@ class GalleriesController extends Controller
     public function __construct(GalleriesService $galleriesService)
     {
         $this->galleriesService = $galleriesService;
+
     }
     /**
      * Display a listing of the resource.
@@ -29,9 +30,9 @@ class GalleriesController extends Controller
      */
     public function store(Request $request)
     {
-        $galleries = $this->galleriesService->postGalleries($request);
+        $gallery = $this->galleriesService->postGalleries($request);
 
-        return $galleries;
+        return $gallery;
     }
 
 
@@ -65,4 +66,11 @@ class GalleriesController extends Controller
 
         return $gallery;
     }
+
+    protected $fillable = [
+        'name',
+        'description',
+        'urls',
+        'user_id'
+    ];
 }

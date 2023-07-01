@@ -14,11 +14,18 @@ class CommentsController extends Controller
         $this->commentsService = $commentsService;
     }
 
+    public function index(Request $request)
+    {
+        return $this->commentsService->showComments($request);
+    }
     public function store(Request $request)
     {
-        $comments = $this->commentsService->storeComments($request);
-        
-        return $comments;
+        return $this->commentsService->postComment($request);
+    }
+    public function destroy(string $id)
+    {
+        $comment = $this->commentsService->deleteComment($id);
+        return $comment;
     }
 
 }
