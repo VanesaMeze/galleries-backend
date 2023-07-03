@@ -4,9 +4,7 @@ namespace App\Service;
 
 use App\Models\Comment;
 use App\Models\Gallery;
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class GalleriesService {
     /**
