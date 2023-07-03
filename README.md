@@ -6,6 +6,6 @@ php artisan key:generate
 
 php artisan config:cache
 #
-email = 'test@tester.com',
+email = test@tester.com
 
-password = 'tester123'
+password = tester123
